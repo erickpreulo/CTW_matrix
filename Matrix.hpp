@@ -19,62 +19,43 @@
 template <typename T>
 class Matrix {
 	private:
-		int _height;
-		int _whidth;
 		std::vector< std::vector<T> > _matrix;
 	public:
-		Matrix() {}
-		Matrix( size_t a, size_t b ) : _height(a), _whidth(b) {}
+		Matrix (size_t lines, size_t colunms)
+		{
+			_matrix.resize(lines);
+			for (size_t i = 0; i < lines; ++i)
+			{
+				for (size_t j = 0; j < colunms; ++j)
+				{
+					_matrix[i].push_back(0);
+				}
+			}
+		}
+
 		~Matrix() {}
 
-		void	insert( std::vector<T> element ) {
-			_matrix.push_back(element);
+		void insert(size_t x, size_t y, T element) 
+		{
+			_matrix[x][y] = element;
 		}
 
-		int		getSize() const {
-			return(_matrix.size());
-		}
+
+		// T &operator[](int i)
+		// {
+		// 	return _matrix[i];
+		// }
 
 		void print()
 		{
-			for ( auto row : _matrix)
+			for (int i = 0; i < 10; ++i)
 			{
-				for (auto cols : row)
-				{
-					std::cout << cols << " ";
-				}
+				for (int j = 0; j < 10; ++j)
+					std::cout << _matrix[i][j];
 				std::cout << "\n";
 			}
 		}
 
 };
-
-template <typename T>
-std::vector<T>*	operator+( std::vector<T> a, std::vector<T> b ) {
-	std::vector<T> *cpy = new std::vector<T>();
-
-	if (a.size() != b.size()) {
-		std::cout << "Cant some diferent vectors!" << std::endl;
-		return (cpy);
-	}
-
-	for (int i = 0; i < a.size(); i++)
-		cpy->push_back(a[i] + b[i]);
-	return (cpy);
-}
-
-template <typename T>
-std::vector<T>*	operator*( std::vector<T> a, std::vector<T> b ) {
-	std::vector<T> *cpy = new std::vector<T>();
-
-	if (a.size() != b.size()) {
-		std::cout << "Cant multiply diferent vectors!" << std::endl;
-		return (cpy);
-	}
-
-	for (int i = 0; i < a.size(); i++)
-		cpy->push_back(a[i] * b[i]);
-	return (cpy);
-}
 
 #endif

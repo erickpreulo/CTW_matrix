@@ -2,25 +2,26 @@
 #include "Matrix.hpp"
 
 int     main() {
-    Matrix<int> m;
+    Matrix<int> m(10,10);
 
-    std::vector<int> a(2, 4);
-    std::vector<int> b(2, 7);
-    std::vector<int> c(1, 3);
-    std::vector<int>* d;
-    // std::vector<int>* e;
-    // std::vector<int>* error;
-    m.insert(a);
-    m.insert(b);
-    m.insert(c);
 
-    d = a + b;
+    // std::vector<int>* d;
+    // // std::vector<int>* e;
+    // // std::vector<int>* error;
+
+    m.insert(5,5, 5);
+   m.print();
+
+   m[5];
+
+   // std::cout << m[2] << std::endl;
+    //d = a + b;
     // e = a * b;
     // error = a + c;
-    m.insert(*d);
+   // m.insert(*d);
     // m.insert(*e);
     // m.insert(*error);
-    m.print();
+    
 
     // delete d;
     // delete e;
