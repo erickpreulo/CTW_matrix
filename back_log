@@ -1,15 +1,15 @@
 ## THINGS TO BE DONE
 
-# operator *
-# operator *=
-# operator +
+# operator * (erick)
+# operator *= (erick)
+# operator + (erick)
 # operator +=
 # operator -
 # operator -=
 
 # getSize
 # getRows
-# getColws
+# getColws (erick)
 
 # print matrix  ### Done
 # insert elements in matrix 
