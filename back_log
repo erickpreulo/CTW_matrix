@@ -5,8 +5,11 @@
 # operator *= (erick)
 # operator + (erick)
 # operator +=
-# operator -
-# operator -=
+# operator -  | Breno
+# operator -= | Breno
+
+# matriz inversa | Breno
+# determinante | Breno
 
 # getSize
 # getRows
