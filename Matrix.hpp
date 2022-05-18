@@ -40,7 +40,46 @@ class Matrix {
 			_matrix[x][y] = element;
 		}
 
+		Matrix operator+( const Matrix &newMatrix) {
+			if (_matrix.size() == newMatrix._matrix.size())
+				for (int i = 0; i < _matrix.size(); i++)
+					for (int j = 0; j < _matrix[i].size(); j++)
+						_matrix[i][j] += newMatrix._matrix[i][j];
+			return (*this);
+		}
 
+		Matrix operator+=( const Matrix &newMatrix) {
+			if (_matrix.size() == newMatrix._matrix.size())
+				for (int i = 0; i < _matrix.size(); i++)
+					for (int j = 0; j < _matrix[i].size(); j++)
+						_matrix[i][j] += newMatrix._matrix[i][j];
+			return (*this);
+		}
+
+		Matrix operator-( const Matrix &newMatrix) {
+			if (_matrix.size() == newMatrix._matrix.size())
+				for (int i = 0; i < _matrix.size(); i++)
+					for (int j = 0; j < _matrix[i].size(); j++)
+						_matrix[i][j] -= newMatrix._matrix[i][j];
+			return (*this);
+		}
+
+		Matrix operator-=( const Matrix &newMatrix) {
+			if (_matrix.size() == newMatrix._matrix.size())
+				for (int i = 0; i < _matrix.size(); i++)
+					for (int j = 0; j < _matrix[i].size(); j++)
+						_matrix[i][j] -= newMatrix._matrix[i][j];
+			return (*this);
+		}
+
+		Matrix operator*( const Matrix &newMatrix) {
+			if (_matrix.size() == newMatrix._matrix.size())
+				for (int i = 0; i < _matrix.size(); i++)
+					for (int j = 0; j < _matrix[i].size(); j++)
+						_matrix[i][j] += newMatrix._matrix[i][j];
+			return (*this);
+		}
+		
 		// T &operator[](int i)
 		// {
 		// 	return _matrix[i];

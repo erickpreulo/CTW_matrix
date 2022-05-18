@@ -3,6 +3,7 @@
 
 int     main() {
     Matrix<int> m(10,10);
+    Matrix<int> m1(10,10);
 
 
     // std::vector<int>* d;
@@ -10,9 +11,9 @@ int     main() {
     // // std::vector<int>* error;
 
     m.insert(5,5, 5);
-   m.print();
+    m1 + m;
+    m1.print();
 
-   m[5];
 
    // std::cout << m[2] << std::endl;
     //d = a + b;
@@ -21,7 +22,7 @@ int     main() {
    // m.insert(*d);
     // m.insert(*e);
     // m.insert(*error);
-    
+
 
     // delete d;
     // delete e;
