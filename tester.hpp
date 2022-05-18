@@ -3,22 +3,18 @@
 
 #include <iostream>
 #include "Matrix.hpp"
+#include <exception>
 
 template < typename T >
-class tester
+class err_tester : std::exception
 {
     private:
-        Matrix<T> _mtxA;
-        Matrix<T> _mtxB;
+        Matrix<T> _mtxA(10,10);
+        Matrix<T> _mtxB(10,10);
     public:
 
         tester()
         {
-            for (auto i = 1; i < 10; ++i)
-            {
-                _mtxA.insert(i);
-                _mxtB.insert(i);
-            }
         }
 
 

@@ -1,0 +1,24 @@
+## THINGS TO BE DONE
+
+# operator * (breno) Done
+# operator *= (breno) Done
+# operator + (erick) Done
+# operator += (erick) Done
+# operator -  (erick) Done
+# operator -= (erick) Done
+# operator [] (valerio) Done
+
+# matriz inversa | Breno
+# determinante | Breno
+# exception for the operators # (valerio) Done
+
+
+# contructor with vectors/
+# getSize # (francisco) Done
+# getRows # (francisco) Done
+# getColws (erick) done
+# increment Rows (erick) Done
+
+# print matrix  # (valerio) Done
+# insert elements in matrix # (valerio) done
+# tester results
