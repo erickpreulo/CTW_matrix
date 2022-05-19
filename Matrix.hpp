@@ -93,9 +93,7 @@ class Matrix {
 		{
 			if (other._rows != this->_rows || other._cols != this->_cols)
 				throw std::out_of_range("Matrix Error: Out of range");
-			for (int i = 0; i < _matrix.size(); i++)
-				for (int j = 0; j < _matrix[i].size(); j++)
-					_matrix[i][j] += other._matrix[i][j];
+			*this = *this + other;;
 			return (*this);
 		}
 
@@ -115,11 +113,7 @@ class Matrix {
 		{
 			if (other._rows != this->_rows || other._cols != this->_cols)
 				throw std::out_of_range("Matrix Error: Out of range");
-
-			for (int i = 0; i < _matrix.size(); i++)
-				for (int j = 0; j < _matrix[i].size(); j++)
-					_matrix[i][j] -= other._matrix[i][j];
-		
+			*this = *this - other;
 			return (*this);
 		}
 
@@ -138,15 +132,9 @@ class Matrix {
 
 		Matrix operator*=(const Matrix& other)
 		{
-			Matrix<T> newMatrix = *this;
 			if (other._rows != this->_rows || other._cols != this->_cols)
 				throw std::out_of_range("Matrix Error: Out of range");
-			for (size_t i = 0; i < _matrix.size(); i++) {
-				for (size_t j = 0; j < _matrix[i].size(); j++) {
-					newMatrix._matrix[i][j] = _linexCol(i,j,_matrix, other._matrix);
-				}
-			}
-			*this = newMatrix;
+			*this = *this * other;
 			return *this;
 		}
 
