@@ -71,14 +71,14 @@ class Matrix {
 				case 9:
 					return _orderThreeDet();
 				default:
+					std::cout << "Matrix too big" << std::endl;
 					return 0;				
 			}
-			std::cout << "Matrix too big" << std::endl;
 		}
 		
 		Matrix operator+( const Matrix &other)
 		{
-			if (other._rows != this->_rows || other.cols != this->cols)
+			if (other._rows != this->_rows || other._cols != this->_cols)
 				throw std::out_of_range("Matrix Error: Out of range");
 	
 			Matrix<T> newM(_rows, _cols);
@@ -91,7 +91,7 @@ class Matrix {
 
 		Matrix operator+=( const Matrix &other)
 		{
-			if (other._rows != this->_rows || other.cols != this->cols)
+			if (other._rows != this->_rows || other._cols != this->_cols)
 				throw std::out_of_range("Matrix Error: Out of range");
 			for (int i = 0; i < _matrix.size(); i++)
 				for (int j = 0; j < _matrix[i].size(); j++)
@@ -101,7 +101,7 @@ class Matrix {
 
 		Matrix operator-( const Matrix &other)
 		{
-			if (other._rows != this->_rows || other.cols != this->cols)
+			if (other._rows != this->_rows || other._cols != this->_cols)
 				throw std::out_of_range("Matrix Error: Out of range");
 	
 			Matrix<T> newM(_rows, _cols);
@@ -113,7 +113,7 @@ class Matrix {
 
 		Matrix operator-=( const Matrix &other)
 		{
-			if (other._rows != this->_rows || other.cols != this->cols)
+			if (other._rows != this->_rows || other._cols != this->_cols)
 				throw std::out_of_range("Matrix Error: Out of range");
 
 			for (int i = 0; i < _matrix.size(); i++)
@@ -125,7 +125,7 @@ class Matrix {
 
 		Matrix operator*(const Matrix& other)
 		{
-			if (other._rows != this->_rows || other.cols != this->cols)
+			if (other._rows != this->_rows || other._cols != this->_cols)
 				throw std::out_of_range("Matrix Error: Out of range");
 			Matrix<T> newMatrix(_matrix.size(), _matrix.size());
 			for (size_t i = 0; i < _matrix.size(); i++) {
@@ -139,7 +139,7 @@ class Matrix {
 		Matrix operator*=(const Matrix& other)
 		{
 			Matrix<T> newMatrix = *this;
-			if (other._rows != this->_rows || other.cols != this->cols)
+			if (other._rows != this->_rows || other._cols != this->_cols)
 				throw std::out_of_range("Matrix Error: Out of range");
 			for (size_t i = 0; i < _matrix.size(); i++) {
 				for (size_t j = 0; j < _matrix[i].size(); j++) {
