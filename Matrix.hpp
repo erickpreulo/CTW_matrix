@@ -28,7 +28,7 @@ class Matrix {
 			{
 				for (size_t j = 0; j < colunms; ++j)
 				{
-					_matrix[i].push_back(1);
+					_matrix[i].push_back(T());
 				}
 			}
 		}
@@ -58,7 +58,7 @@ class Matrix {
 			_matrix.resize(_rows + n);
 			for (int i = _rows; i < (_rows + n); ++i) 
 				for (int j = 0; j < _cols; ++j)
-					_matrix[i].push_back(0);
+					_matrix[i].push_back(T());
 			_rows += n;
 		}
 

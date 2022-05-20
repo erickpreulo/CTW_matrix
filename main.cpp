@@ -2,9 +2,9 @@
 #include "Matrix.hpp"
 
 int     main() {
-    Matrix<int> m(6,10);
-    Matrix<int> m1(6,10);
-    Matrix<int> mcpy(0, 1);
+    Matrix<double> m(6,10);
+    //Matrix<int> m1(6,10);
+   // Matrix<int> mcpy(0, 1);
 
 
     // std::vector<int>* d;
